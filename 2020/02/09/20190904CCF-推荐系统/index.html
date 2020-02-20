@@ -46,21 +46,21 @@
   };
 </script>
 
-  <meta name="description" content="题目信息编号： 201909-4试题名称： 推荐系统时间限制： 5.0s内存限制： 512.0MB 题目某电商有编号为0到m-1的m类商品，包括家电、汽车、电动车、面包、化妆品等。对于每个app新用户，每类商品初始有编号不同的n个商品，包括各个商家、品牌、供应商等。在任何时刻，同类的任意两个商品的编号各不相同，不同类的任意两个商品的编号可能相同。app会给每个商品打分。初始时，各类商品的编号和得分">
+  <meta name="description" content="题目信息编号： 201909-4试题名称： 推荐系统时间限制： 5.0s内存限制： 512.0MB">
 <meta property="og:type" content="article">
 <meta property="og:title" content="20190904CCF-推荐系统">
 <meta property="og:url" content="https://xjywhu.github.io/2020/02/09/20190904CCF-%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9F/index.html">
 <meta property="og:site_name" content="小鲸鱼的博客">
-<meta property="og:description" content="题目信息编号： 201909-4试题名称： 推荐系统时间限制： 5.0s内存限制： 512.0MB 题目某电商有编号为0到m-1的m类商品，包括家电、汽车、电动车、面包、化妆品等。对于每个app新用户，每类商品初始有编号不同的n个商品，包括各个商家、品牌、供应商等。在任何时刻，同类的任意两个商品的编号各不相同，不同类的任意两个商品的编号可能相同。app会给每个商品打分。初始时，各类商品的编号和得分">
+<meta property="og:description" content="题目信息编号： 201909-4试题名称： 推荐系统时间限制： 5.0s内存限制： 512.0MB">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://xjywhu.github.io/.io//image/CCF/20190904CCF-%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9F.png">
+<meta property="og:image" content="https://xjywhu.github.io/2020/02/09/20190904CCF-%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9F/%E5%AD%90%E4%BB%BB%E5%8A%A1.png">
 <meta property="article:published_time" content="2020-02-09T02:32:51.000Z">
-<meta property="article:modified_time" content="2020-02-18T14:30:52.535Z">
+<meta property="article:modified_time" content="2020-02-20T08:03:01.299Z">
 <meta property="article:author" content="肖劲宇">
 <meta property="article:tag" content="CCF">
 <meta property="article:tag" content="Algorithm">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://xjywhu.github.io/.io//image/CCF/20190904CCF-%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9F.png">
+<meta name="twitter:image" content="https://xjywhu.github.io/2020/02/09/20190904CCF-%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9F/%E5%AD%90%E4%BB%BB%E5%8A%A1.png">
 
 <link rel="canonical" href="https://xjywhu.github.io/2020/02/09/20190904CCF-%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9F/">
 
@@ -229,7 +229,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-02-18 22:30:52" itemprop="dateModified" datetime="2020-02-18T22:30:52+08:00">2020-02-18</time>
+                <time title="修改时间：2020-02-20 16:03:01" itemprop="dateModified" datetime="2020-02-20T16:03:01+08:00">2020-02-20</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -255,12 +255,13 @@
 
       
         <h2 id="题目信息"><a href="#题目信息" class="headerlink" title="题目信息"></a>题目信息</h2><p>编号： 201909-4<br>试题名称： 推荐系统<br>时间限制： 5.0s<br>内存限制： 512.0MB</p>
-<h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p>某电商有编号为0到m-1的m类商品，包括家电、汽车、电动车、面包、化妆品等。对于每个app新用户，每类商品初始有编号不同的n个商品，包括各个商家、品牌、供应商等。在任何时刻，同类的任意两个商品的编号各不相同，不同类的任意两个商品的编号可能相同。app会给每个商品打分。初始时，各类商品的编号和得分都相同。在用户使用app时，会产生有效信息，包括喜欢、不喜欢等。app会根据这些信息，在某类商品增加或删除商品。app每次会推荐一部分商品给用户看。一个简单的想法是，选出各类所有商品中得分最大的若干商品。<br>该方法虽然简单，但是如果某类商品可能得分特别高，这种简单想法就无法保证推荐商品的多样性。因此，app查询得分最大的若干商品，同时限制各类商品个数不能超过一个阅值。将上述过程抽象成3中操作：操作1、2、3，分别对应增加、删除、查询操作：<br>1 type commodity score表示在type类商品中增加编号为commodity的商品，该商品分数为score<br>2 type commodity表示在type类商品中删除编号为commodity的商品。<br>3 k k_0 k_1 k_{m-1}表示在各类所有商品中选出不超过K个（不一定要达到K个）得分最大的商品，同时第i（0&lt;=i&lt;m）类商品的个数不超过k_i。在查询时，如果第a（0&lt;=a&lt;m）类商品中编号为b的商品和第A（0&lt;=A&lt;m）类商品中编号为B的商品得分相同：<br>1，当a=A时，选取编号为min（b，B）的商品；<br>2，当a≠A时，选取第min（a，A）类商品。</p>
-<h2 id="输入"><a href="#输入" class="headerlink" title="输入"></a>输入</h2><p>从标准输入读入数据。<br>输入的第一行包含两个正整数m和n，保证n&lt;=3x10^4和m&lt;=50.<br>接下来n行，每行两个正整数id和score。第1+j（1&lt;=j&lt;=n）行表示所有m类商品的第j个商品的编号和得分。<br>接下来一行包含一个正整数opnum，表示操作总数，保证n&lt;=10^5。其中，查询操作一共有opask个，保证opask &lt;= 10^2.<br>接下来opnum行，每行若干个正整数，格式对应1 type commodity score、2<br>type commodity、3 K k_0 k_1 … k_{m-1}，其中，K&lt;=10^2，k_0 k_1 … k_{m-1}&lt;=10^5.</p>
-<h2 id="输出"><a href="#输出" class="headerlink" title="输出"></a>输出</h2><p>输出到标准输出。<br>输出共opask×m，对应opask个查询操作。第r×m+c，0&lt;=r&lt;opask，1&lt;=c&lt;=m行表示，在第r个查询操作中，第c类商品选出的商品编号，同类商品的编号从小到大输出。如果r个查询操作中，第c类商品没有选出任何商品，则该行输出-1</p>
+<a id="more"></a>
+<h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><p>某电商有编号为0到m-1的m类商品，包括家电、汽车、电动车、面包、化妆品等。对于每个app新用户，每类商品初始有编号不同的n个商品，包括各个商家、品牌、供应商等。在任何时刻，同类的任意两个商品的编号各不相同，不同类的任意两个商品的编号可能相同。app会给每个商品打分。初始时，各类商品的编号和得分都相同。在用户使用app时，会产生有效信息，包括喜欢、不喜欢等。app会根据这些信息，在某类商品增加或删除商品。app每次会推荐一部分商品给用户看。一个简单的想法是，选出各类所有商品中得分最大的若干商品。<br>该方法虽然简单，但是如果某类商品可能得分特别高，这种简单想法就无法保证推荐商品的多样性。因此，app查询得分最大的若干商品，同时限制各类商品个数不能超过一个阅值。将上述过程抽象成3中操作：操作1、2、3，分别对应增加、删除、查询操作：<br>1 type commodity score表示在type类商品中增加编号为commodity的商品，该商品分数为score<br>2 type commodity表示在type类商品中删除编号为commodity的商品。<br>3 k k_0 k_1 k_{m-1}表示在各类所有商品中选出不超过K个（不一定要达到K个）得分最大的商品，同时第i（0&lt;=i&lt;m）类商品的个数不超过k_i。在查询时，如果第a（0&lt;=a&lt;m）类商品中编号为b的商品和第A（0&lt;=A&lt;m）类商品中编号为B的商品得分相同：<br>1，当a=A时，选取编号为min（b，B）的商品；<br>2，当a≠A时，选取第min（a，A）类商品。</p>
+<h2 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式"></a>输入格式</h2><p>从标准输入读入数据。<br>输入的第一行包含两个正整数m和n，保证n&lt;=3x10^4和m&lt;=50.<br>接下来n行，每行两个正整数id和score。第1+j（1&lt;=j&lt;=n）行表示所有m类商品的第j个商品的编号和得分。<br>接下来一行包含一个正整数opnum，表示操作总数，保证n&lt;=10^5。其中，查询操作一共有opask个，保证opask &lt;= 10^2.<br>接下来opnum行，每行若干个正整数，格式对应1 type commodity score、2<br>type commodity、3 K k_0 k_1 … k_{m-1}，其中，K&lt;=10^2，k_0 k_1 … k_{m-1}&lt;=10^5.</p>
+<h2 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式"></a>输出格式</h2><p>输出到标准输出。<br>输出共opask×m，对应opask个查询操作。第r×m+c，0&lt;=r&lt;opask，1&lt;=c&lt;=m行表示，在第r个查询操作中，第c类商品选出的商品编号，同类商品的编号从小到大输出。如果r个查询操作中，第c类商品没有选出任何商品，则该行输出-1</p>
 <h2 id="输入样例"><a href="#输入样例" class="headerlink" title="输入样例"></a>输入样例</h2><p>2 3<br>1 3<br>2 2<br>3 1<br>8<br>3 100 1 1<br>1 0 4 3<br>1 0 5 1<br>3 10 2 2<br>3 10 1 1<br>2 0 1<br>3 2 1 1<br>3 1 1 1</p>
 <h2 id="输出样例"><a href="#输出样例" class="headerlink" title="输出样例"></a>输出样例</h2><p>1<br>1<br>1 4<br>1 2<br>1<br>1<br>4<br>1<br>4<br>-1</p>
-<h2 id="子任务"><a href="#子任务" class="headerlink" title="子任务"></a>子任务</h2><p><img src="/.io//image/CCF/20190904CCF-%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9F.png" alt="avatar"></p>
+<h2 id="子任务"><a href="#子任务" class="headerlink" title="子任务"></a>子任务</h2><p><img src="/2020/02/09/20190904CCF-%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9F/%E5%AD%90%E4%BB%BB%E5%8A%A1.png" alt="子任务"></p>
 <h2 id="C-代码"><a href="#C-代码" class="headerlink" title="C++代码"></a>C++代码</h2><pre><code class="c++"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span>
 <span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;string&gt;</span></span>
 <span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;vector&gt;</span></span>
@@ -455,7 +456,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#题目信息"><span class="nav-number">1.</span> <span class="nav-text">题目信息</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#题目"><span class="nav-number">2.</span> <span class="nav-text">题目</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#输入"><span class="nav-number">3.</span> <span class="nav-text">输入</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#输出"><span class="nav-number">4.</span> <span class="nav-text">输出</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#输入样例"><span class="nav-number">5.</span> <span class="nav-text">输入样例</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#输出样例"><span class="nav-number">6.</span> <span class="nav-text">输出样例</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#子任务"><span class="nav-number">7.</span> <span class="nav-text">子任务</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#C-代码"><span class="nav-number">8.</span> <span class="nav-text">C++代码</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#题目信息"><span class="nav-number">1.</span> <span class="nav-text">题目信息</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#题目描述"><span class="nav-number">2.</span> <span class="nav-text">题目描述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#输入格式"><span class="nav-number">3.</span> <span class="nav-text">输入格式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#输出格式"><span class="nav-number">4.</span> <span class="nav-text">输出格式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#输入样例"><span class="nav-number">5.</span> <span class="nav-text">输入样例</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#输出样例"><span class="nav-number">6.</span> <span class="nav-text">输出样例</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#子任务"><span class="nav-number">7.</span> <span class="nav-text">子任务</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#C-代码"><span class="nav-number">8.</span> <span class="nav-text">C++代码</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
