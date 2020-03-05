@@ -46,20 +46,30 @@
   };
 </script>
 
-  <meta name="description" content="类型转换string转数值#include&lt;string&gt;    string和数值转换 转换类型    stoi(s,p,b) 把字符串s从p开始转换成b进制的int   stol(s,p,b) 把字符串s从p开始转换成b进制的long   stoul(s,p,b) 把字符串s从p开始转换成b进制的unsigned long   stoll(s,p,b) 把字符串s从p开始转换成b进">
+  <meta name="description" content="Convex：凸的non-convex：非凸的Conjugate gradient:共轭梯度BFGSL-BFGS">
 <meta property="og:type" content="article">
-<meta property="og:title" content="C++库函数">
-<meta property="og:url" content="https://xjywhu.github.io/2020/02/18/Cpp%E5%BA%93%E5%87%BD%E6%95%B0/index.html">
+<meta property="og:title" content="LogisticRegression">
+<meta property="og:url" content="https://xjywhu.github.io/2020/03/05/LogisticRegression/index.html">
 <meta property="og:site_name" content="小鲸鱼的博客">
-<meta property="og:description" content="类型转换string转数值#include&lt;string&gt;    string和数值转换 转换类型    stoi(s,p,b) 把字符串s从p开始转换成b进制的int   stol(s,p,b) 把字符串s从p开始转换成b进制的long   stoul(s,p,b) 把字符串s从p开始转换成b进制的unsigned long   stoll(s,p,b) 把字符串s从p开始转换成b进">
+<meta property="og:description" content="Convex：凸的non-convex：非凸的Conjugate gradient:共轭梯度BFGSL-BFGS">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2020-02-18T11:53:55.000Z">
-<meta property="article:modified_time" content="2020-02-20T08:37:10.771Z">
+<meta property="og:image" content="https://xjywhu.github.io/2020/03/05/LogisticRegression/Formula.png">
+<meta property="og:image" content="https://xjywhu.github.io/2020/03/05/LogisticRegression/Gradient-Descent.PNG">
+<meta property="og:image" content="https://xjywhu.github.io/2020/03/05/LogisticRegression/Cost-Function0.PNG">
+<meta property="og:image" content="https://xjywhu.github.io/2020/03/05/LogisticRegression/Cost-Function1.PNG">
+<meta property="og:image" content="https://xjywhu.github.io/2020/03/05/LogisticRegression/Cost-Function2.PNG">
+<meta property="og:image" content="https://xjywhu.github.io/2020/03/05/LogisticRegression/infer.PNG">
+<meta property="og:image" content="https://xjywhu.github.io/2020/03/05/LogisticRegression/OneVsAll1.PNG">
+<meta property="og:image" content="https://xjywhu.github.io/2020/03/05/LogisticRegression/OneVsAll2.PNG">
+<meta property="og:image" content="https://xjywhu.github.io/2020/03/05/LogisticRegression/Advanced-Optimization.PNG">
+<meta property="article:published_time" content="2020-03-05T07:26:52.000Z">
+<meta property="article:modified_time" content="2020-03-05T08:48:02.096Z">
 <meta property="article:author" content="肖劲宇">
-<meta property="article:tag" content="C++">
+<meta property="article:tag" content="Machine Learning">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://xjywhu.github.io/2020/03/05/LogisticRegression/Formula.png">
 
-<link rel="canonical" href="https://xjywhu.github.io/2020/02/18/Cpp%E5%BA%93%E5%87%BD%E6%95%B0/">
+<link rel="canonical" href="https://xjywhu.github.io/2020/03/05/LogisticRegression/">
 
 
 <script id="page-configurations">
@@ -71,7 +81,7 @@
   };
 </script>
 
-  <title>C++库函数 | 小鲸鱼的博客</title>
+  <title>LogisticRegression | 小鲸鱼的博客</title>
   
 
 
@@ -201,7 +211,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://xjywhu.github.io/2020/02/18/Cpp%E5%BA%93%E5%87%BD%E6%95%B0/">
+    <link itemprop="mainEntityOfPage" href="https://xjywhu.github.io/2020/03/05/LogisticRegression/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -214,7 +224,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          C++库函数
+          LogisticRegression
         </h1>
 
         <div class="post-meta">
@@ -223,16 +233,10 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
+              
 
-              <time title="创建时间：2020-02-18 19:53:55" itemprop="dateCreated datePublished" datetime="2020-02-18T19:53:55+08:00">2020-02-18</time>
+              <time title="创建时间：2020-03-05 15:26:52 / 修改时间：16:48:02" itemprop="dateCreated datePublished" datetime="2020-03-05T15:26:52+08:00">2020-03-05</time>
             </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-02-20 16:37:10" itemprop="dateModified" datetime="2020-02-20T16:37:10+08:00">2020-02-20</time>
-              </span>
 
           
 
@@ -245,139 +249,16 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1 id="类型转换"><a href="#类型转换" class="headerlink" title="类型转换"></a>类型转换</h1><h2 id="string转数值"><a href="#string转数值" class="headerlink" title="string转数值"></a>string转数值</h2><pre><code class="c++"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;string&gt;</span></span></code></pre>
-<table>
-<thead>
-<tr>
-<th>string和数值转换</th>
-<th>转换类型</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>stoi(s,p,b)</td>
-<td>把字符串s从p开始转换成b进制的int</td>
-</tr>
-<tr>
-<td>stol(s,p,b)</td>
-<td>把字符串s从p开始转换成b进制的long</td>
-</tr>
-<tr>
-<td>stoul(s,p,b)</td>
-<td>把字符串s从p开始转换成b进制的unsigned long</td>
-</tr>
-<tr>
-<td>stoll(s,p,b)</td>
-<td>把字符串s从p开始转换成b进制的long long</td>
-</tr>
-<tr>
-<td>stoull(s,p,b)</td>
-<td>把字符串s从p开始转换成b进制的unsigned long long</td>
-</tr>
-<tr>
-<td>stof(s,p)</td>
-<td>把字符串s从p开始转换成float</td>
-</tr>
-<tr>
-<td>stod(s,p)</td>
-<td>把字符串s从p开始转换成double</td>
-</tr>
-<tr>
-<td>stold(s,p)</td>
-<td>l把字符串s从p开始转换成long double</td>
-</tr>
-</tbody></table>
-<h2 id="char-和char数组转数值"><a href="#char-和char数组转数值" class="headerlink" title="char*和char数组转数值"></a>char*和char数组转数值</h2><pre><code class="c++"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cctype&gt;</span></span>
-<span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span>
-<span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdlib&gt;</span></span></code></pre>
-<table>
-<thead>
-<tr>
-<th>字符串和数值转换</th>
-<th>作用</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>atof(s)</td>
-<td>将字符串s[n]转换为双精度浮点型值。</td>
-</tr>
-<tr>
-<td>atoi(s)</td>
-<td>将字符串s[n]转换为整型值。</td>
-</tr>
-<tr>
-<td>atol(s)</td>
-<td>将字符串s[n]转换为长整型值。</td>
-</tr>
-<tr>
-<td>strtod(s,*p,b)</td>
-<td>将字符串s[n]转换为b进制双精度浮点型值，到p停止,并报告不能被转换的所有剩余数字。</td>
-</tr>
-<tr>
-<td>strtol(s,*p,b)</td>
-<td>将字符串s[n]转换为b进制长整值，到p停止,并报告不能被转换的所有剩余数字。</td>
-</tr>
-<tr>
-<td>strtoul(s,*p,b)</td>
-<td>将字符串s[n]转换为b进制无符号长整型值，到p停止,并报告不能被转换的所有剩余数字。</td>
-</tr>
-</tbody></table>
-<h2 id="数值转为字符串"><a href="#数值转为字符串" class="headerlink" title="数值转为字符串"></a>数值转为字符串</h2><p>(1) 用stringstream即可把多种数值类型转换为String类型的字符串</p>
-<pre><code class="c++"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string&gt;</span></span>
-<span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;sstream&gt;</span></span>
-<span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt; </span></span>
-<span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;
-<span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>{
-    <span class="keyword">double</span> a = <span class="number">123.32</span>;
-    <span class="built_in">string</span> res;
-    <span class="built_in">stringstream</span> ss;
-    ss &lt;&lt; a;
-    ss &gt;&gt; res;
-    <span class="built_in">cout</span>&lt;&lt;res; 
-    <span class="keyword">return</span> <span class="number">0</span>;
-}</code></pre>
-<p>(2) 用to_string转换</p>
-<pre><code class="c++"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span>
-<span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;string&gt;</span></span>
-<span class="keyword">using</span> namspace <span class="built_in">std</span>;
-<span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>{
-    <span class="built_in">string</span> s;
-    <span class="keyword">int</span> a =<span class="number">30</span>
-    <span class="built_in">cout</span>&lt;&lt;to_string(a)&lt;&lt;<span class="built_in">endl</span>;
-}</code></pre>
-<h2 id="进制之间转换"><a href="#进制之间转换" class="headerlink" title="进制之间转换"></a>进制之间转换</h2><p>(1) 10进制转2进制 bitset</p>
-<pre><code class="c++"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span>
-<span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bitset&gt;</span></span>
-<span class="keyword">using</span> namspace <span class="built_in">std</span>;
-<span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>{
-    <span class="keyword">int</span> c=<span class="number">121312</span>;
-    <span class="built_in">bitset</span>&lt;32&gt; b = c;<span class="comment">//将c转换为32位2进制数</span>
-    <span class="built_in">cout</span>&lt;&lt;b&lt;&lt;<span class="built_in">endl</span>;
-}</code></pre>
-<p>(2) 16进制转换</p>
-<pre><code class="c++"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span>
-<span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;sstream&gt;</span></span>
-<span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;string&gt;</span></span>
-<span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iomanip&gt;</span></span>
-<span class="keyword">using</span> namspace <span class="built_in">std</span>;
-<span class="function"><span class="built_in">string</span> <span class="title">dec2hex</span><span class="params">(<span class="keyword">int</span> i)</span></span>{
-    <span class="built_in">stringstream</span> ioss;
-    <span class="built_in">string</span> s_temp;
-    ioss&lt;&lt; setiosflags(ios::uppercase)&lt;&lt;hex&lt;&lt;i;
-    ioss&gt;&gt;s_temp;
-    <span class="keyword">return</span> s_temp;
-}</code></pre>
-<pre><code class="c++"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span>
-<span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;sstream&gt;</span></span>
-<span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;string&gt;</span></span>
-<span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iomanip&gt;</span></span>
-<span class="keyword">using</span> namspace <span class="built_in">std</span>;
-<span class="function"><span class="keyword">unsigned</span> <span class="keyword">int</span> <span class="title">hex2dec</span><span class="params">(<span class="built_in">string</span> str)</span></span>{
-    <span class="keyword">unsigned</span> <span class="keyword">int</span> x;
-    <span class="built_in">stringstream</span> ss;
-    ss &lt;&lt; hex &lt;&lt; str;
-    ss &gt;&gt; x;
-    <span class="keyword">return</span> x;
-}</code></pre>
+        <p>Convex：凸的<br>non-convex：非凸的<br>Conjugate gradient:共轭梯度<br>BFGS<br>L-BFGS</p>
+<a id="more"></a>
+<h2 id="公式"><a href="#公式" class="headerlink" title="公式"></a>公式</h2><p><img src="/2020/03/05/LogisticRegression/Formula.png" alt="formula"></p>
+<h2 id="梯度下降"><a href="#梯度下降" class="headerlink" title="梯度下降"></a>梯度下降</h2><p><img src="/2020/03/05/LogisticRegression/Gradient-Descent.PNG" alt="Gradient-Descent"></p>
+<h2 id="推导"><a href="#推导" class="headerlink" title="推导"></a>推导</h2><h3 id="cost-function"><a href="#cost-function" class="headerlink" title="cost function"></a>cost function</h3><p><img src="/2020/03/05/LogisticRegression/Cost-Function0.PNG" alt="Cost-Function"></p>
+<p><img src="/2020/03/05/LogisticRegression/Cost-Function1.PNG" alt="Cost-Function"></p>
+<p><img src="/2020/03/05/LogisticRegression/Cost-Function2.PNG" alt="Cost-Function"></p>
+<h3 id="梯度更新"><a href="#梯度更新" class="headerlink" title="梯度更新"></a>梯度更新</h3><p><img src="/2020/03/05/LogisticRegression/infer.PNG" alt="infer"></p>
+<h2 id="One-Vs-All"><a href="#One-Vs-All" class="headerlink" title="One Vs All"></a>One Vs All</h2><p><img src="/2020/03/05/LogisticRegression/OneVsAll1.PNG" alt="OneVsAll1.PNG"><br><img src="/2020/03/05/LogisticRegression/OneVsAll2.PNG" alt="OneVsAll2.PNG"><br>$ h(\Theta)_i $相当于计算第i类的概率，自然是选择概率最大的归为那一类</p>
+<h2 id="Advanced-optimization"><a href="#Advanced-optimization" class="headerlink" title="Advanced optimization"></a>Advanced optimization</h2><p>梯度下降的高级优化算法：<br><img src="/2020/03/05/LogisticRegression/Advanced-Optimization.PNG" alt="AO"></p>
 
     </div>
 
@@ -387,7 +268,7 @@
 
       <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/C/" rel="tag"># C++</a>
+              <a href="/tags/Machine-Learning/" rel="tag"># Machine Learning</a>
           </div>
 
         
@@ -396,13 +277,10 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2020/02/09/20190904CCF-%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9F/" rel="prev" title="20190904CCF-推荐系统">
-      <i class="fa fa-chevron-left"></i> 20190904CCF-推荐系统
+    <a href="/2020/03/05/LinearRegression/" rel="prev" title="LinearRegression">
+      <i class="fa fa-chevron-left"></i> LinearRegression
     </a></div>
-      <div class="post-nav-item">
-    <a href="/2020/02/18/20190903CCF-%E5%AD%97%E7%AC%A6%E7%94%BB/" rel="next" title="20190903CCF-字符画">
-      20190903CCF-字符画 <i class="fa fa-chevron-right"></i>
-    </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
@@ -462,7 +340,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#类型转换"><span class="nav-number">1.</span> <span class="nav-text">类型转换</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#string转数值"><span class="nav-number">1.1.</span> <span class="nav-text">string转数值</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#char-和char数组转数值"><span class="nav-number">1.2.</span> <span class="nav-text">char*和char数组转数值</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数值转为字符串"><span class="nav-number">1.3.</span> <span class="nav-text">数值转为字符串</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#进制之间转换"><span class="nav-number">1.4.</span> <span class="nav-text">进制之间转换</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#公式"><span class="nav-number">1.</span> <span class="nav-text">公式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#梯度下降"><span class="nav-number">2.</span> <span class="nav-text">梯度下降</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#推导"><span class="nav-number">3.</span> <span class="nav-text">推导</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#cost-function"><span class="nav-number">3.1.</span> <span class="nav-text">cost function</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#梯度更新"><span class="nav-number">3.2.</span> <span class="nav-text">梯度更新</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#One-Vs-All"><span class="nav-number">4.</span> <span class="nav-text">One Vs All</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Advanced-optimization"><span class="nav-number">5.</span> <span class="nav-text">Advanced optimization</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -610,6 +488,54 @@
   
 
   
+      
+<script type="text/x-mathjax-config">
+
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$', '$'], ['\\(', '\\)'] ],
+      processEscapes: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {
+      equationNumbers: {
+        autoNumber: 'AMS'
+      }
+    }
+  });
+
+  MathJax.Hub.Register.StartupHook('TeX Jax Ready', function() {
+    MathJax.InputJax.TeX.prefilterHooks.Add(function(data) {
+      if (data.display) {
+        var next = data.script.nextSibling;
+        while (next && next.nodeName.toLowerCase() === '#text') {
+          next = next.nextSibling;
+        }
+        if (next && next.nodeName.toLowerCase() === 'br') {
+          next.parentNode.removeChild(next);
+        }
+      }
+    });
+  });
+
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for (i = 0; i < all.length; i += 1) {
+      element = document.getElementById(all[i].inputID + '-Frame').parentNode;
+      if (element.nodeName.toLowerCase() == 'li') {
+        element = element.parentNode;
+      }
+      element.classList.add('has-jax');
+    }
+  });
+</script>
+<script>
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS-MML_HTMLorMML', () => {
+    MathJax.Hub.Typeset();
+  }, window.MathJax);
+</script>
+
+    
 
   
 

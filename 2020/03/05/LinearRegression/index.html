@@ -46,20 +46,32 @@
   };
 </script>
 
-  <meta name="description" content="类型转换string转数值#include&lt;string&gt;    string和数值转换 转换类型    stoi(s,p,b) 把字符串s从p开始转换成b进制的int   stol(s,p,b) 把字符串s从p开始转换成b进制的long   stoul(s,p,b) 把字符串s从p开始转换成b进制的unsigned long   stoll(s,p,b) 把字符串s从p开始转换成b进">
+  <meta name="description" content="Supervised LearningGiven the “right answer” for each example in the data.Regression ProblemPredict real-valued outputGradient descent: 梯度下降Feature Scaling：特征缩放Learning Rate：学习率Batch Gradient descent:">
 <meta property="og:type" content="article">
-<meta property="og:title" content="C++库函数">
-<meta property="og:url" content="https://xjywhu.github.io/2020/02/18/Cpp%E5%BA%93%E5%87%BD%E6%95%B0/index.html">
+<meta property="og:title" content="LinearRegression">
+<meta property="og:url" content="https://xjywhu.github.io/2020/03/05/LinearRegression/index.html">
 <meta property="og:site_name" content="小鲸鱼的博客">
-<meta property="og:description" content="类型转换string转数值#include&lt;string&gt;    string和数值转换 转换类型    stoi(s,p,b) 把字符串s从p开始转换成b进制的int   stol(s,p,b) 把字符串s从p开始转换成b进制的long   stoul(s,p,b) 把字符串s从p开始转换成b进制的unsigned long   stoll(s,p,b) 把字符串s从p开始转换成b进">
+<meta property="og:description" content="Supervised LearningGiven the “right answer” for each example in the data.Regression ProblemPredict real-valued outputGradient descent: 梯度下降Feature Scaling：特征缩放Learning Rate：学习率Batch Gradient descent:">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2020-02-18T11:53:55.000Z">
-<meta property="article:modified_time" content="2020-02-20T08:37:10.771Z">
+<meta property="og:image" content="https://xjywhu.github.io/2020/03/05/LinearRegression/Formula.PNG">
+<meta property="og:image" content="https://xjywhu.github.io/2020/03/05/LinearRegression/Gradient-Descent.PNG">
+<meta property="og:image" content="https://xjywhu.github.io/2020/03/05/LinearRegression/Muti.PNG">
+<meta property="og:image" content="https://xjywhu.github.io/2020/03/05/LinearRegression/infer.png">
+<meta property="og:image" content="https://xjywhu.github.io/2020/03/05/LinearRegression/Feature-Scaling.PNG">
+<meta property="og:image" content="https://xjywhu.github.io/2020/03/05/LinearRegression/Learning-Rate.PNG">
+<meta property="og:image" content="https://xjywhu.github.io/2020/03/05/LinearRegression/Polynomial-Regression.PNG">
+<meta property="og:image" content="https://xjywhu.github.io/2020/03/05/LinearRegression/Normal-Equation.PNG">
+<meta property="og:image" content="https://xjywhu.github.io/2020/03/05/LinearRegression/infer1.PNG">
+<meta property="og:image" content="https://xjywhu.github.io/2020/03/05/LinearRegression/infer2.PNG">
+<meta property="og:image" content="https://xjywhu.github.io/2020/03/05/LinearRegression/Compare.PNG">
+<meta property="article:published_time" content="2020-03-05T01:28:44.000Z">
+<meta property="article:modified_time" content="2020-03-05T04:52:18.861Z">
 <meta property="article:author" content="肖劲宇">
-<meta property="article:tag" content="C++">
+<meta property="article:tag" content="Machine Learning">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://xjywhu.github.io/2020/03/05/LinearRegression/Formula.PNG">
 
-<link rel="canonical" href="https://xjywhu.github.io/2020/02/18/Cpp%E5%BA%93%E5%87%BD%E6%95%B0/">
+<link rel="canonical" href="https://xjywhu.github.io/2020/03/05/LinearRegression/">
 
 
 <script id="page-configurations">
@@ -71,7 +83,7 @@
   };
 </script>
 
-  <title>C++库函数 | 小鲸鱼的博客</title>
+  <title>LinearRegression | 小鲸鱼的博客</title>
   
 
 
@@ -201,7 +213,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://xjywhu.github.io/2020/02/18/Cpp%E5%BA%93%E5%87%BD%E6%95%B0/">
+    <link itemprop="mainEntityOfPage" href="https://xjywhu.github.io/2020/03/05/LinearRegression/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -214,7 +226,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          C++库函数
+          LinearRegression
         </h1>
 
         <div class="post-meta">
@@ -223,16 +235,10 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
+              
 
-              <time title="创建时间：2020-02-18 19:53:55" itemprop="dateCreated datePublished" datetime="2020-02-18T19:53:55+08:00">2020-02-18</time>
+              <time title="创建时间：2020-03-05 09:28:44 / 修改时间：12:52:18" itemprop="dateCreated datePublished" datetime="2020-03-05T09:28:44+08:00">2020-03-05</time>
             </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-02-20 16:37:10" itemprop="dateModified" datetime="2020-02-20T16:37:10+08:00">2020-02-20</time>
-              </span>
 
           
 
@@ -245,139 +251,23 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1 id="类型转换"><a href="#类型转换" class="headerlink" title="类型转换"></a>类型转换</h1><h2 id="string转数值"><a href="#string转数值" class="headerlink" title="string转数值"></a>string转数值</h2><pre><code class="c++"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;string&gt;</span></span></code></pre>
-<table>
-<thead>
-<tr>
-<th>string和数值转换</th>
-<th>转换类型</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>stoi(s,p,b)</td>
-<td>把字符串s从p开始转换成b进制的int</td>
-</tr>
-<tr>
-<td>stol(s,p,b)</td>
-<td>把字符串s从p开始转换成b进制的long</td>
-</tr>
-<tr>
-<td>stoul(s,p,b)</td>
-<td>把字符串s从p开始转换成b进制的unsigned long</td>
-</tr>
-<tr>
-<td>stoll(s,p,b)</td>
-<td>把字符串s从p开始转换成b进制的long long</td>
-</tr>
-<tr>
-<td>stoull(s,p,b)</td>
-<td>把字符串s从p开始转换成b进制的unsigned long long</td>
-</tr>
-<tr>
-<td>stof(s,p)</td>
-<td>把字符串s从p开始转换成float</td>
-</tr>
-<tr>
-<td>stod(s,p)</td>
-<td>把字符串s从p开始转换成double</td>
-</tr>
-<tr>
-<td>stold(s,p)</td>
-<td>l把字符串s从p开始转换成long double</td>
-</tr>
-</tbody></table>
-<h2 id="char-和char数组转数值"><a href="#char-和char数组转数值" class="headerlink" title="char*和char数组转数值"></a>char*和char数组转数值</h2><pre><code class="c++"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cctype&gt;</span></span>
-<span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span>
-<span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdlib&gt;</span></span></code></pre>
-<table>
-<thead>
-<tr>
-<th>字符串和数值转换</th>
-<th>作用</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>atof(s)</td>
-<td>将字符串s[n]转换为双精度浮点型值。</td>
-</tr>
-<tr>
-<td>atoi(s)</td>
-<td>将字符串s[n]转换为整型值。</td>
-</tr>
-<tr>
-<td>atol(s)</td>
-<td>将字符串s[n]转换为长整型值。</td>
-</tr>
-<tr>
-<td>strtod(s,*p,b)</td>
-<td>将字符串s[n]转换为b进制双精度浮点型值，到p停止,并报告不能被转换的所有剩余数字。</td>
-</tr>
-<tr>
-<td>strtol(s,*p,b)</td>
-<td>将字符串s[n]转换为b进制长整值，到p停止,并报告不能被转换的所有剩余数字。</td>
-</tr>
-<tr>
-<td>strtoul(s,*p,b)</td>
-<td>将字符串s[n]转换为b进制无符号长整型值，到p停止,并报告不能被转换的所有剩余数字。</td>
-</tr>
-</tbody></table>
-<h2 id="数值转为字符串"><a href="#数值转为字符串" class="headerlink" title="数值转为字符串"></a>数值转为字符串</h2><p>(1) 用stringstream即可把多种数值类型转换为String类型的字符串</p>
-<pre><code class="c++"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string&gt;</span></span>
-<span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;sstream&gt;</span></span>
-<span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt; </span></span>
-<span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;
-<span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>{
-    <span class="keyword">double</span> a = <span class="number">123.32</span>;
-    <span class="built_in">string</span> res;
-    <span class="built_in">stringstream</span> ss;
-    ss &lt;&lt; a;
-    ss &gt;&gt; res;
-    <span class="built_in">cout</span>&lt;&lt;res; 
-    <span class="keyword">return</span> <span class="number">0</span>;
-}</code></pre>
-<p>(2) 用to_string转换</p>
-<pre><code class="c++"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span>
-<span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;string&gt;</span></span>
-<span class="keyword">using</span> namspace <span class="built_in">std</span>;
-<span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>{
-    <span class="built_in">string</span> s;
-    <span class="keyword">int</span> a =<span class="number">30</span>
-    <span class="built_in">cout</span>&lt;&lt;to_string(a)&lt;&lt;<span class="built_in">endl</span>;
-}</code></pre>
-<h2 id="进制之间转换"><a href="#进制之间转换" class="headerlink" title="进制之间转换"></a>进制之间转换</h2><p>(1) 10进制转2进制 bitset</p>
-<pre><code class="c++"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span>
-<span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bitset&gt;</span></span>
-<span class="keyword">using</span> namspace <span class="built_in">std</span>;
-<span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>{
-    <span class="keyword">int</span> c=<span class="number">121312</span>;
-    <span class="built_in">bitset</span>&lt;32&gt; b = c;<span class="comment">//将c转换为32位2进制数</span>
-    <span class="built_in">cout</span>&lt;&lt;b&lt;&lt;<span class="built_in">endl</span>;
-}</code></pre>
-<p>(2) 16进制转换</p>
-<pre><code class="c++"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span>
-<span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;sstream&gt;</span></span>
-<span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;string&gt;</span></span>
-<span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iomanip&gt;</span></span>
-<span class="keyword">using</span> namspace <span class="built_in">std</span>;
-<span class="function"><span class="built_in">string</span> <span class="title">dec2hex</span><span class="params">(<span class="keyword">int</span> i)</span></span>{
-    <span class="built_in">stringstream</span> ioss;
-    <span class="built_in">string</span> s_temp;
-    ioss&lt;&lt; setiosflags(ios::uppercase)&lt;&lt;hex&lt;&lt;i;
-    ioss&gt;&gt;s_temp;
-    <span class="keyword">return</span> s_temp;
-}</code></pre>
-<pre><code class="c++"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span>
-<span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;sstream&gt;</span></span>
-<span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;string&gt;</span></span>
-<span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iomanip&gt;</span></span>
-<span class="keyword">using</span> namspace <span class="built_in">std</span>;
-<span class="function"><span class="keyword">unsigned</span> <span class="keyword">int</span> <span class="title">hex2dec</span><span class="params">(<span class="built_in">string</span> str)</span></span>{
-    <span class="keyword">unsigned</span> <span class="keyword">int</span> x;
-    <span class="built_in">stringstream</span> ss;
-    ss &lt;&lt; hex &lt;&lt; str;
-    ss &gt;&gt; x;
-    <span class="keyword">return</span> x;
-}</code></pre>
+        <p><strong>Supervised Learning</strong><br>Given the “right answer” for each example in the data.<br><strong>Regression Problem</strong><br>Predict real-valued output<br>Gradient descent: 梯度下降<br>Feature Scaling：特征缩放<br>Learning Rate：学习率<br>Batch Gradient descent: Each step of gradient descent uses all the training examples.</p>
+<a id="more"></a>
+<h2 id="1-公式"><a href="#1-公式" class="headerlink" title="1.公式"></a>1.公式</h2><p><img src="/2020/03/05/LinearRegression/Formula.PNG" alt="Formula">   </p>
+<h2 id="2-最优化更新"><a href="#2-最优化更新" class="headerlink" title="2.最优化更新"></a>2.最优化更新</h2><p>梯度下降   </p>
+<h3 id="单变量"><a href="#单变量" class="headerlink" title="单变量"></a>单变量</h3><p><img src="/2020/03/05/LinearRegression/Gradient-Descent.PNG" alt="Gradient-Descent"><br>对于含有i个参数的，$ \Theta_i $ 的更新法则和$ \Theta_1 $是一样的 </p>
+<h3 id="多变量"><a href="#多变量" class="headerlink" title="多变量"></a>多变量</h3><p><img src="/2020/03/05/LinearRegression/Muti.PNG" alt="Muti"><br>$ x^{(i)}_j $表示第i个样本的第j个特征，当j=0时候，xij=1<br>这种方法叫做“Batch” Gradient Descent<br><strong>“Batch”: Each step of gradient descent uses all the training examples.</strong><br>迭代停止可以通过计算每次目标函数的减小小于某个数，或者设置最大的迭代次数</p>
+<h2 id="3-推导"><a href="#3-推导" class="headerlink" title="3.推导"></a>3.推导</h2><p><img src="/2020/03/05/LinearRegression/infer.png" alt="Infer"></p>
+<h2 id="4-注意"><a href="#4-注意" class="headerlink" title="4.注意"></a>4.注意</h2><h3 id="Feature-Scaling"><a href="#Feature-Scaling" class="headerlink" title="Feature Scaling"></a>Feature Scaling</h3><p>Ag表示使用特征缩放，让所有的特征大致位于一个范围可以使得梯度下降进行的更好，但是并未给出严格的数学证明，下面一张图大致能够解释原因：<br><strong>进行缩放之后得到的函数，在进行预测时也需要带入缩放后的特征</strong><br><img src="/2020/03/05/LinearRegression/Feature-Scaling.PNG" alt="Feature-Scaling"><br>我的理解是：如果某一维度上取值较大时，在更新对应的参数$ \Theta $ 时，步长也较大，此时就会出现在大维度参数上震荡的情况，导致路线曲折地通往极值点。<br>如果所有维度的取值范围相近，就不会出现震荡的情况，路线就会笔直地通往极值点。知乎上这篇文章说的比较详细 <a href="https://zhuanlan.zhihu.com/p/25234554" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/25234554</a><br>特征缩放的方式还是有很多的，这里给出Ag举出的均值归一化  </p>
+<ul>
+<li>Mean normalization<br>  Replace $x_i$ with $x_i-\mu-i$ to make features have approximately zero mean (Do not apply to $x_0=1$ ).</li>
+</ul>
+<h3 id="Learning-Rate"><a href="#Learning-Rate" class="headerlink" title="Learning Rate"></a>Learning Rate</h3><ul>
+<li>If a is too small: slow convergence.</li>
+<li>If a is too large: $ J(\Theta) $ may not decrease on every iteration; may not converge.<br>因为当学习率比较大的时候，在接近极小值时，因为步长比较大，会跳到极值点的另一侧，这时候倒数项也会变大，从而导致theta在两侧波动，最终发散。<br><img src="/2020/03/05/LinearRegression/Learning-Rate.PNG" alt="Learning-Rate"><br><font size="6"><strong>To choose a, try<br>…0.001,0.003,0.01,0.03,0.1,0.3…</strong></font><h2 id="5-多项式拟合"><a href="#5-多项式拟合" class="headerlink" title="5.多项式拟合"></a>5.多项式拟合</h2><img src="/2020/03/05/LinearRegression/Polynomial-Regression.PNG" alt="Polynomial-Regression"><br>相当于是用了换元的思想，本质上还是Linear-Regression  <h2 id="6-Normal-Equation"><a href="#6-Normal-Equation" class="headerlink" title="6.Normal Equation"></a>6.Normal Equation</h2>因为线性回归比较简单，所以数学上可以解出来极值点。<br><img src="/2020/03/05/LinearRegression/Normal-Equation.PNG" alt="Normal-Equation"><h3 id="推导"><a href="#推导" class="headerlink" title="推导"></a>推导</h3><img src="/2020/03/05/LinearRegression/infer1.PNG" alt="infer1"><br><img src="/2020/03/05/LinearRegression/infer2.PNG" alt="infer2"><br><img src="/2020/03/05/LinearRegression/Compare.PNG" alt="Compare"><br>What if$X^TX$is non-invertible?  </li>
+<li>Redundant features (linearly dependent).(存在冗余，各个feature之间线性不独立)</li>
+<li>Too many features (Delete some features, or use regularization.)</li>
+</ul>
 
     </div>
 
@@ -387,7 +277,7 @@
 
       <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/C/" rel="tag"># C++</a>
+              <a href="/tags/Machine-Learning/" rel="tag"># Machine Learning</a>
           </div>
 
         
@@ -396,12 +286,12 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2020/02/09/20190904CCF-%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9F/" rel="prev" title="20190904CCF-推荐系统">
-      <i class="fa fa-chevron-left"></i> 20190904CCF-推荐系统
+    <a href="/2020/03/03/2020TimeLine/" rel="prev" title="2020TimeLine">
+      <i class="fa fa-chevron-left"></i> 2020TimeLine
     </a></div>
       <div class="post-nav-item">
-    <a href="/2020/02/18/20190903CCF-%E5%AD%97%E7%AC%A6%E7%94%BB/" rel="next" title="20190903CCF-字符画">
-      20190903CCF-字符画 <i class="fa fa-chevron-right"></i>
+    <a href="/2020/03/05/LogisticRegression/" rel="next" title="LogisticRegression">
+      LogisticRegression <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
@@ -462,7 +352,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#类型转换"><span class="nav-number">1.</span> <span class="nav-text">类型转换</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#string转数值"><span class="nav-number">1.1.</span> <span class="nav-text">string转数值</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#char-和char数组转数值"><span class="nav-number">1.2.</span> <span class="nav-text">char*和char数组转数值</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数值转为字符串"><span class="nav-number">1.3.</span> <span class="nav-text">数值转为字符串</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#进制之间转换"><span class="nav-number">1.4.</span> <span class="nav-text">进制之间转换</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-公式"><span class="nav-number">1.</span> <span class="nav-text">1.公式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-最优化更新"><span class="nav-number">2.</span> <span class="nav-text">2.最优化更新</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#单变量"><span class="nav-number">2.1.</span> <span class="nav-text">单变量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#多变量"><span class="nav-number">2.2.</span> <span class="nav-text">多变量</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-推导"><span class="nav-number">3.</span> <span class="nav-text">3.推导</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-注意"><span class="nav-number">4.</span> <span class="nav-text">4.注意</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Feature-Scaling"><span class="nav-number">4.1.</span> <span class="nav-text">Feature Scaling</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Learning-Rate"><span class="nav-number">4.2.</span> <span class="nav-text">Learning Rate</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-多项式拟合"><span class="nav-number">5.</span> <span class="nav-text">5.多项式拟合</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-Normal-Equation"><span class="nav-number">6.</span> <span class="nav-text">6.Normal Equation</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#推导"><span class="nav-number">6.1.</span> <span class="nav-text">推导</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -610,6 +500,54 @@
   
 
   
+      
+<script type="text/x-mathjax-config">
+
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$', '$'], ['\\(', '\\)'] ],
+      processEscapes: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {
+      equationNumbers: {
+        autoNumber: 'AMS'
+      }
+    }
+  });
+
+  MathJax.Hub.Register.StartupHook('TeX Jax Ready', function() {
+    MathJax.InputJax.TeX.prefilterHooks.Add(function(data) {
+      if (data.display) {
+        var next = data.script.nextSibling;
+        while (next && next.nodeName.toLowerCase() === '#text') {
+          next = next.nextSibling;
+        }
+        if (next && next.nodeName.toLowerCase() === 'br') {
+          next.parentNode.removeChild(next);
+        }
+      }
+    });
+  });
+
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for (i = 0; i < all.length; i += 1) {
+      element = document.getElementById(all[i].inputID + '-Frame').parentNode;
+      if (element.nodeName.toLowerCase() == 'li') {
+        element = element.parentNode;
+      }
+      element.classList.add('has-jax');
+    }
+  });
+</script>
+<script>
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS-MML_HTMLorMML', () => {
+    MathJax.Hub.Typeset();
+  }, window.MathJax);
+</script>
+
+    
 
   
 
