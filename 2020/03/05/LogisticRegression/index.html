@@ -46,24 +46,25 @@
   };
 </script>
 
-  <meta name="description" content="Convex：凸的non-convex：非凸的Conjugate gradient:共轭梯度BFGSL-BFGS">
+  <meta name="description" content="MLE:Maximum Likelihood EstimateCross Entropy Loss:交叉熵损失函数MSE:Mean Square Error 均方误差Convex：凸的non-convex：非凸的Conjugate gradient:共轭梯度BFGSL-BFGS">
 <meta property="og:type" content="article">
 <meta property="og:title" content="LogisticRegression">
 <meta property="og:url" content="https://xjywhu.github.io/2020/03/05/LogisticRegression/index.html">
 <meta property="og:site_name" content="小鲸鱼的博客">
-<meta property="og:description" content="Convex：凸的non-convex：非凸的Conjugate gradient:共轭梯度BFGSL-BFGS">
+<meta property="og:description" content="MLE:Maximum Likelihood EstimateCross Entropy Loss:交叉熵损失函数MSE:Mean Square Error 均方误差Convex：凸的non-convex：非凸的Conjugate gradient:共轭梯度BFGSL-BFGS">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://xjywhu.github.io/2020/03/05/LogisticRegression/Formula.png">
 <meta property="og:image" content="https://xjywhu.github.io/2020/03/05/LogisticRegression/Gradient-Descent.PNG">
 <meta property="og:image" content="https://xjywhu.github.io/2020/03/05/LogisticRegression/Cost-Function0.PNG">
 <meta property="og:image" content="https://xjywhu.github.io/2020/03/05/LogisticRegression/Cost-Function1.PNG">
 <meta property="og:image" content="https://xjywhu.github.io/2020/03/05/LogisticRegression/Cost-Function2.PNG">
+<meta property="og:image" content="https://xjywhu.github.io/2020/03/05/LogisticRegression/MLE-Infer.jpg">
 <meta property="og:image" content="https://xjywhu.github.io/2020/03/05/LogisticRegression/infer.PNG">
 <meta property="og:image" content="https://xjywhu.github.io/2020/03/05/LogisticRegression/OneVsAll1.PNG">
 <meta property="og:image" content="https://xjywhu.github.io/2020/03/05/LogisticRegression/OneVsAll2.PNG">
 <meta property="og:image" content="https://xjywhu.github.io/2020/03/05/LogisticRegression/Advanced-Optimization.PNG">
 <meta property="article:published_time" content="2020-03-05T07:26:52.000Z">
-<meta property="article:modified_time" content="2020-03-05T08:48:02.096Z">
+<meta property="article:modified_time" content="2020-03-05T13:53:35.778Z">
 <meta property="article:author" content="肖劲宇">
 <meta property="article:tag" content="Machine Learning">
 <meta name="twitter:card" content="summary">
@@ -157,7 +158,7 @@
   </li>
         <li class="menu-item menu-item-tags">
 
-    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签<span class="badge">6</span></a>
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签<span class="badge">10</span></a>
 
   </li>
         <li class="menu-item menu-item-categories">
@@ -167,7 +168,7 @@
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档<span class="badge">8</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档<span class="badge">12</span></a>
 
   </li>
         <li class="menu-item menu-item-ccf-csp">
@@ -183,6 +184,11 @@
         <li class="menu-item menu-item-learning-notes">
 
     <a href="/Learning-Notes/" rel="section"><i class="fa fa-fw fa-book"></i>Learning-Notes</a>
+
+  </li>
+        <li class="menu-item menu-item-随笔">
+
+    <a href="/%E9%9A%8F%E7%AC%94/" rel="section"><i class="fa fa-fw fa-eyedropper"></i>随笔</a>
 
   </li>
   </ul>
@@ -235,7 +241,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2020-03-05 15:26:52 / 修改时间：16:48:02" itemprop="dateCreated datePublished" datetime="2020-03-05T15:26:52+08:00">2020-03-05</time>
+              <time title="创建时间：2020-03-05 15:26:52 / 修改时间：21:53:35" itemprop="dateCreated datePublished" datetime="2020-03-05T15:26:52+08:00">2020-03-05</time>
             </span>
 
           
@@ -249,13 +255,13 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>Convex：凸的<br>non-convex：非凸的<br>Conjugate gradient:共轭梯度<br>BFGS<br>L-BFGS</p>
+        <p>MLE:Maximum Likelihood Estimate<br>Cross Entropy Loss:交叉熵损失函数<br>MSE:Mean Square Error 均方误差<br>Convex：凸的<br>non-convex：非凸的<br>Conjugate gradient:共轭梯度<br>BFGS<br>L-BFGS</p>
 <a id="more"></a>
 <h2 id="公式"><a href="#公式" class="headerlink" title="公式"></a>公式</h2><p><img src="/2020/03/05/LogisticRegression/Formula.png" alt="formula"></p>
-<h2 id="梯度下降"><a href="#梯度下降" class="headerlink" title="梯度下降"></a>梯度下降</h2><p><img src="/2020/03/05/LogisticRegression/Gradient-Descent.PNG" alt="Gradient-Descent"></p>
+<h2 id="梯度下降"><a href="#梯度下降" class="headerlink" title="梯度下降"></a>梯度下降</h2><p><img src="/2020/03/05/LogisticRegression/Gradient-Descent.PNG" alt="Gradient-Descent"><br>这里Ag把学习率从线性的a换成了a/m，因为是常数所以没有影响。</p>
 <h2 id="推导"><a href="#推导" class="headerlink" title="推导"></a>推导</h2><h3 id="cost-function"><a href="#cost-function" class="headerlink" title="cost function"></a>cost function</h3><p><img src="/2020/03/05/LogisticRegression/Cost-Function0.PNG" alt="Cost-Function"></p>
 <p><img src="/2020/03/05/LogisticRegression/Cost-Function1.PNG" alt="Cost-Function"></p>
-<p><img src="/2020/03/05/LogisticRegression/Cost-Function2.PNG" alt="Cost-Function"></p>
+<p><img src="/2020/03/05/LogisticRegression/Cost-Function2.PNG" alt="Cost-Function"><br>下面是从最大似然估计的角度得到的交叉熵损失函数的推导：<br><img src="/2020/03/05/LogisticRegression/MLE-Infer.jpg" alt="MLE"></p>
 <h3 id="梯度更新"><a href="#梯度更新" class="headerlink" title="梯度更新"></a>梯度更新</h3><p><img src="/2020/03/05/LogisticRegression/infer.PNG" alt="infer"></p>
 <h2 id="One-Vs-All"><a href="#One-Vs-All" class="headerlink" title="One Vs All"></a>One Vs All</h2><p><img src="/2020/03/05/LogisticRegression/OneVsAll1.PNG" alt="OneVsAll1.PNG"><br><img src="/2020/03/05/LogisticRegression/OneVsAll2.PNG" alt="OneVsAll2.PNG"><br>$ h(\Theta)_i $相当于计算第i类的概率，自然是选择概率最大的归为那一类</p>
 <h2 id="Advanced-optimization"><a href="#Advanced-optimization" class="headerlink" title="Advanced optimization"></a>Advanced optimization</h2><p>梯度下降的高级优化算法：<br><img src="/2020/03/05/LogisticRegression/Advanced-Optimization.PNG" alt="AO"></p>
@@ -280,7 +286,10 @@
     <a href="/2020/03/05/LinearRegression/" rel="prev" title="LinearRegression">
       <i class="fa fa-chevron-left"></i> LinearRegression
     </a></div>
-      <div class="post-nav-item"></div>
+      <div class="post-nav-item">
+    <a href="/2020/03/12/%E5%92%8C%E5%BC%A6%E8%BF%9B%E8%A1%8C%E6%80%BB%E7%BB%93/" rel="next" title="和弦进行总结">
+      和弦进行总结 <i class="fa fa-chevron-right"></i>
+    </a></div>
     </div>
       </footer>
     
@@ -357,7 +366,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">8</span>
+          <span class="site-state-item-count">12</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -370,7 +379,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">6</span>
+        <span class="site-state-item-count">10</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>

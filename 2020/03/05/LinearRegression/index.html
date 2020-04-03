@@ -57,6 +57,7 @@
 <meta property="og:image" content="https://xjywhu.github.io/2020/03/05/LinearRegression/Gradient-Descent.PNG">
 <meta property="og:image" content="https://xjywhu.github.io/2020/03/05/LinearRegression/Muti.PNG">
 <meta property="og:image" content="https://xjywhu.github.io/2020/03/05/LinearRegression/infer.png">
+<meta property="og:image" content="https://xjywhu.github.io/2020/03/05/LinearRegression/MLE-Infer.PNG">
 <meta property="og:image" content="https://xjywhu.github.io/2020/03/05/LinearRegression/Feature-Scaling.PNG">
 <meta property="og:image" content="https://xjywhu.github.io/2020/03/05/LinearRegression/Learning-Rate.PNG">
 <meta property="og:image" content="https://xjywhu.github.io/2020/03/05/LinearRegression/Polynomial-Regression.PNG">
@@ -65,7 +66,7 @@
 <meta property="og:image" content="https://xjywhu.github.io/2020/03/05/LinearRegression/infer2.PNG">
 <meta property="og:image" content="https://xjywhu.github.io/2020/03/05/LinearRegression/Compare.PNG">
 <meta property="article:published_time" content="2020-03-05T01:28:44.000Z">
-<meta property="article:modified_time" content="2020-03-05T04:52:18.861Z">
+<meta property="article:modified_time" content="2020-03-05T13:59:09.282Z">
 <meta property="article:author" content="肖劲宇">
 <meta property="article:tag" content="Machine Learning">
 <meta name="twitter:card" content="summary">
@@ -159,7 +160,7 @@
   </li>
         <li class="menu-item menu-item-tags">
 
-    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签<span class="badge">6</span></a>
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签<span class="badge">10</span></a>
 
   </li>
         <li class="menu-item menu-item-categories">
@@ -169,7 +170,7 @@
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档<span class="badge">8</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档<span class="badge">12</span></a>
 
   </li>
         <li class="menu-item menu-item-ccf-csp">
@@ -185,6 +186,11 @@
         <li class="menu-item menu-item-learning-notes">
 
     <a href="/Learning-Notes/" rel="section"><i class="fa fa-fw fa-book"></i>Learning-Notes</a>
+
+  </li>
+        <li class="menu-item menu-item-随笔">
+
+    <a href="/%E9%9A%8F%E7%AC%94/" rel="section"><i class="fa fa-fw fa-eyedropper"></i>随笔</a>
 
   </li>
   </ul>
@@ -237,7 +243,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2020-03-05 09:28:44 / 修改时间：12:52:18" itemprop="dateCreated datePublished" datetime="2020-03-05T09:28:44+08:00">2020-03-05</time>
+              <time title="创建时间：2020-03-05 09:28:44 / 修改时间：21:59:09" itemprop="dateCreated datePublished" datetime="2020-03-05T09:28:44+08:00">2020-03-05</time>
             </span>
 
           
@@ -257,7 +263,7 @@
 <h2 id="2-最优化更新"><a href="#2-最优化更新" class="headerlink" title="2.最优化更新"></a>2.最优化更新</h2><p>梯度下降   </p>
 <h3 id="单变量"><a href="#单变量" class="headerlink" title="单变量"></a>单变量</h3><p><img src="/2020/03/05/LinearRegression/Gradient-Descent.PNG" alt="Gradient-Descent"><br>对于含有i个参数的，$ \Theta_i $ 的更新法则和$ \Theta_1 $是一样的 </p>
 <h3 id="多变量"><a href="#多变量" class="headerlink" title="多变量"></a>多变量</h3><p><img src="/2020/03/05/LinearRegression/Muti.PNG" alt="Muti"><br>$ x^{(i)}_j $表示第i个样本的第j个特征，当j=0时候，xij=1<br>这种方法叫做“Batch” Gradient Descent<br><strong>“Batch”: Each step of gradient descent uses all the training examples.</strong><br>迭代停止可以通过计算每次目标函数的减小小于某个数，或者设置最大的迭代次数</p>
-<h2 id="3-推导"><a href="#3-推导" class="headerlink" title="3.推导"></a>3.推导</h2><p><img src="/2020/03/05/LinearRegression/infer.png" alt="Infer"></p>
+<h2 id="3-推导"><a href="#3-推导" class="headerlink" title="3.推导"></a>3.推导</h2><p><img src="/2020/03/05/LinearRegression/infer.png" alt="Infer"><br>下面是从最大似然估计的角度求得的损失函数<br><img src="/2020/03/05/LinearRegression/MLE-Infer.PNG" alt="MLE"></p>
 <h2 id="4-注意"><a href="#4-注意" class="headerlink" title="4.注意"></a>4.注意</h2><h3 id="Feature-Scaling"><a href="#Feature-Scaling" class="headerlink" title="Feature Scaling"></a>Feature Scaling</h3><p>Ag表示使用特征缩放，让所有的特征大致位于一个范围可以使得梯度下降进行的更好，但是并未给出严格的数学证明，下面一张图大致能够解释原因：<br><strong>进行缩放之后得到的函数，在进行预测时也需要带入缩放后的特征</strong><br><img src="/2020/03/05/LinearRegression/Feature-Scaling.PNG" alt="Feature-Scaling"><br>我的理解是：如果某一维度上取值较大时，在更新对应的参数$ \Theta $ 时，步长也较大，此时就会出现在大维度参数上震荡的情况，导致路线曲折地通往极值点。<br>如果所有维度的取值范围相近，就不会出现震荡的情况，路线就会笔直地通往极值点。知乎上这篇文章说的比较详细 <a href="https://zhuanlan.zhihu.com/p/25234554" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/25234554</a><br>特征缩放的方式还是有很多的，这里给出Ag举出的均值归一化  </p>
 <ul>
 <li>Mean normalization<br>  Replace $x_i$ with $x_i-\mu-i$ to make features have approximately zero mean (Do not apply to $x_0=1$ ).</li>
@@ -369,7 +375,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">8</span>
+          <span class="site-state-item-count">12</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -382,7 +388,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">6</span>
+        <span class="site-state-item-count">10</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
