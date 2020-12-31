@@ -19,7 +19,7 @@
 <script id="hexo-configurations">
   var NexT = window.NexT || {};
   var CONFIG = {
-    hostname: new URL('https://xjywhu.github.io').hostname,
+    hostname: new URL('http://www.whalexiao.com').hostname,
     root: '/',
     scheme: 'Gemini',
     version: '7.7.0',
@@ -49,23 +49,23 @@
   <meta name="description" content="任何一项软件通过源码编译安装都是困难的刚刚源码编译完WireShark的我深有体会依稀记得上次数据库老师让我们用源码编译PostGreSql花费了我一整天时间这次网络分布式的实验–源码编译WireShark竟然花费了我近两天时间安装的过程无非就是下载各种依赖，配置各种环境变量但是一旦有一步出现一个小小的问题都会卡很久下面我把自己编译WireShark过程中总结如下">
 <meta property="og:type" content="article">
 <meta property="og:title" content="VS2017+WireShark编译安装">
-<meta property="og:url" content="https://xjywhu.github.io/2020/03/16/VS2017-WireShark%E7%BC%96%E8%AF%91%E5%AE%89%E8%A3%85/index.html">
+<meta property="og:url" content="http://www.whalexiao.com/2020/03/16/VS2017-WireShark%E7%BC%96%E8%AF%91%E5%AE%89%E8%A3%85/index.html">
 <meta property="og:site_name" content="小鲸鱼的博客">
 <meta property="og:description" content="任何一项软件通过源码编译安装都是困难的刚刚源码编译完WireShark的我深有体会依稀记得上次数据库老师让我们用源码编译PostGreSql花费了我一整天时间这次网络分布式的实验–源码编译WireShark竟然花费了我近两天时间安装的过程无非就是下载各种依赖，配置各种环境变量但是一旦有一步出现一个小小的问题都会卡很久下面我把自己编译WireShark过程中总结如下">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://xjywhu.github.io/2020/03/16/VS2017-WireShark%E7%BC%96%E8%AF%91%E5%AE%89%E8%A3%85/cmake-GUI.PNG">
-<meta property="og:image" content="https://xjywhu.github.io/2020/03/16/VS2017-WireShark%E7%BC%96%E8%AF%91%E5%AE%89%E8%A3%85/error.png">
-<meta property="og:image" content="https://xjywhu.github.io/2020/03/16/VS2017-WireShark%E7%BC%96%E8%AF%91%E5%AE%89%E8%A3%85/prompt.png">
-<meta property="og:image" content="https://xjywhu.github.io/2020/03/16/VS2017-WireShark%E7%BC%96%E8%AF%91%E5%AE%89%E8%A3%85/env1.PNG">
-<meta property="og:image" content="https://xjywhu.github.io/2020/03/16/VS2017-WireShark%E7%BC%96%E8%AF%91%E5%AE%89%E8%A3%85/env2.PNG">
-<meta property="og:image" content="https://xjywhu.github.io/2020/03/16/VS2017-WireShark%E7%BC%96%E8%AF%91%E5%AE%89%E8%A3%85/error.png">
+<meta property="og:image" content="http://www.whalexiao.com/2020/03/16/VS2017-WireShark%E7%BC%96%E8%AF%91%E5%AE%89%E8%A3%85/cmake-GUI.PNG">
+<meta property="og:image" content="http://www.whalexiao.com/2020/03/16/VS2017-WireShark%E7%BC%96%E8%AF%91%E5%AE%89%E8%A3%85/error.png">
+<meta property="og:image" content="http://www.whalexiao.com/2020/03/16/VS2017-WireShark%E7%BC%96%E8%AF%91%E5%AE%89%E8%A3%85/prompt.png">
+<meta property="og:image" content="http://www.whalexiao.com/2020/03/16/VS2017-WireShark%E7%BC%96%E8%AF%91%E5%AE%89%E8%A3%85/env1.PNG">
+<meta property="og:image" content="http://www.whalexiao.com/2020/03/16/VS2017-WireShark%E7%BC%96%E8%AF%91%E5%AE%89%E8%A3%85/env2.PNG">
+<meta property="og:image" content="http://www.whalexiao.com/2020/03/16/VS2017-WireShark%E7%BC%96%E8%AF%91%E5%AE%89%E8%A3%85/error.png">
 <meta property="article:published_time" content="2020-03-15T16:02:28.000Z">
 <meta property="article:modified_time" content="2020-03-16T05:56:14.215Z">
 <meta property="article:author" content="肖劲宇">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://xjywhu.github.io/2020/03/16/VS2017-WireShark%E7%BC%96%E8%AF%91%E5%AE%89%E8%A3%85/cmake-GUI.PNG">
+<meta name="twitter:image" content="http://www.whalexiao.com/2020/03/16/VS2017-WireShark%E7%BC%96%E8%AF%91%E5%AE%89%E8%A3%85/cmake-GUI.PNG">
 
-<link rel="canonical" href="https://xjywhu.github.io/2020/03/16/VS2017-WireShark%E7%BC%96%E8%AF%91%E5%AE%89%E8%A3%85/">
+<link rel="canonical" href="http://www.whalexiao.com/2020/03/16/VS2017-WireShark%E7%BC%96%E8%AF%91%E5%AE%89%E8%A3%85/">
 
 
 <script id="page-configurations">
@@ -217,7 +217,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://xjywhu.github.io/2020/03/16/VS2017-WireShark%E7%BC%96%E8%AF%91%E5%AE%89%E8%A3%85/">
+    <link itemprop="mainEntityOfPage" href="http://www.whalexiao.com/2020/03/16/VS2017-WireShark%E7%BC%96%E8%AF%91%E5%AE%89%E8%A3%85/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
