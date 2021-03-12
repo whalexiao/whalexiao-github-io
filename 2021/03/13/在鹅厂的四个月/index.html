@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Fira Sans:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+
+
+<script id="hexo-configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    hostname: new URL('http://www.whalexiao.com').hostname,
+    root: '/',
+    scheme: 'Gemini',
+    version: '7.7.0',
+    exturl: false,
+    sidebar: {"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},
+    copycode: {"enable":false,"show_result":false,"style":null},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":true},
+    bookmark: {"enable":false,"color":"#222","save":"auto"},
+    fancybox: false,
+    mediumzoom: false,
+    lazyload: false,
+    pangu: false,
+    comments: {"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},
+    algolia: {
+      appID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: '',
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}
+  };
+</script>
+
+  <meta name="description" content="在鹅厂的四个月2020.11.24-2020.3.12. 在鹅厂的4个月很快结束了。   来时北京初雪，归时春风拂面。  起某天开完组会后，导师说SDN已经过时了，又和Y师兄聊了聊网络方向的科研，觉得网络偏系统的科研在企业真实的场景下做才有前景。后来Y师兄在thuhole里面看到TEG招机器学习做网络故障检测的研究岗实习，Y师兄拍案而起，研究方向正中下怀。于是Y师兄加上了thuhole钓鱼帖的联系">
+<meta property="og:type" content="article">
+<meta property="og:title" content="在鹅厂的四个月">
+<meta property="og:url" content="http://www.whalexiao.com/2021/03/13/%E5%9C%A8%E9%B9%85%E5%8E%82%E7%9A%84%E5%9B%9B%E4%B8%AA%E6%9C%88/index.html">
+<meta property="og:site_name" content="小鲸鱼的博客">
+<meta property="og:description" content="在鹅厂的四个月2020.11.24-2020.3.12. 在鹅厂的4个月很快结束了。   来时北京初雪，归时春风拂面。  起某天开完组会后，导师说SDN已经过时了，又和Y师兄聊了聊网络方向的科研，觉得网络偏系统的科研在企业真实的场景下做才有前景。后来Y师兄在thuhole里面看到TEG招机器学习做网络故障检测的研究岗实习，Y师兄拍案而起，研究方向正中下怀。于是Y师兄加上了thuhole钓鱼帖的联系">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://www.whalexiao.com/2021/03/13/%E5%9C%A8%E9%B9%85%E5%8E%82%E7%9A%84%E5%9B%9B%E4%B8%AA%E6%9C%88/mmexport1601264622314.jpg">
+<meta property="og:image" content="http://www.whalexiao.com/2021/03/13/%E5%9C%A8%E9%B9%85%E5%8E%82%E7%9A%84%E5%9B%9B%E4%B8%AA%E6%9C%88/pt2021_03_12_18_52_25.jpg">
+<meta property="og:image" content="http://www.whalexiao.com/2021/03/13/%E5%9C%A8%E9%B9%85%E5%8E%82%E7%9A%84%E5%9B%9B%E4%B8%AA%E6%9C%88/pt2021_03_12_18_58_21.jpg">
+<meta property="og:image" content="http://www.whalexiao.com/2021/03/13/%E5%9C%A8%E9%B9%85%E5%8E%82%E7%9A%84%E5%9B%9B%E4%B8%AA%E6%9C%88/pt2021_03_12_19_21_39.jpg">
+<meta property="og:image" content="http://www.whalexiao.com/2021/03/13/%E5%9C%A8%E9%B9%85%E5%8E%82%E7%9A%84%E5%9B%9B%E4%B8%AA%E6%9C%88/pt2021_03_12_19_17_41.jpg">
+<meta property="og:image" content="http://www.whalexiao.com/2021/03/13/%E5%9C%A8%E9%B9%85%E5%8E%82%E7%9A%84%E5%9B%9B%E4%B8%AA%E6%9C%88/pt2021_03_12_19_08_26.jpg">
+<meta property="og:image" content="http://www.whalexiao.com/2021/03/13/%E5%9C%A8%E9%B9%85%E5%8E%82%E7%9A%84%E5%9B%9B%E4%B8%AA%E6%9C%88/mmexport1615452357140.jpg">
+<meta property="article:published_time" content="2021-03-12T16:02:35.731Z">
+<meta property="article:modified_time" content="2021-03-12T15:58:30.000Z">
+<meta property="article:author" content="肖劲宇">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://www.whalexiao.com/2021/03/13/%E5%9C%A8%E9%B9%85%E5%8E%82%E7%9A%84%E5%9B%9B%E4%B8%AA%E6%9C%88/mmexport1601264622314.jpg">
+
+<link rel="canonical" href="http://www.whalexiao.com/2021/03/13/%E5%9C%A8%E9%B9%85%E5%8E%82%E7%9A%84%E5%9B%9B%E4%B8%AA%E6%9C%88/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: false,
+    isPost: true
+  };
+</script>
+
+  <title>在鹅厂的四个月 | 小鲸鱼的博客</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"><a href="https://github.com/xjywhu" target="_blank" rel="noopener" class="github-corner" aria-label="View source on GitHub"><svg width="100" height="100" viewBox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-meta">
+
+    <div>
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">小鲸鱼的博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+        <p class="site-subtitle">他们说快写一段代码雅俗共赏</p>
+  </div>
+
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-fw fa-user"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签<span class="badge">10</span></a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类<span class="badge">1</span></a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档<span class="badge">21</span></a>
+
+  </li>
+        <li class="menu-item menu-item-ccf-csp">
+
+    <a href="/CCF-CSP/" rel="section"><i class="fa fa-fw fa-laptop"></i>ccf-csp</a>
+
+  </li>
+        <li class="menu-item menu-item-cs-postgraduate">
+
+    <a href="/CSPostgraduate/" rel="section"><i class="fa fa-fw fa-graduation-cap"></i>cs-postgraduate</a>
+
+  </li>
+        <li class="menu-item menu-item-learning-notes">
+
+    <a href="/Learning-Notes/" rel="section"><i class="fa fa-fw fa-book"></i>Learning-Notes</a>
+
+  </li>
+        <li class="menu-item menu-item-随笔">
+
+    <a href="/%E9%9A%8F%E7%AC%94/" rel="section"><i class="fa fa-fw fa-eyedropper"></i>随笔</a>
+
+  </li>
+        <li class="menu-item menu-item-music">
+
+    <a href="/Music/" rel="section"><i class="fa fa-fw fa-music"></i>Music</a>
+
+  </li>
+  </ul>
+
+</nav>
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content">
+            
+
+  <div class="posts-expand">
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.whalexiao.com/2021/03/13/%E5%9C%A8%E9%B9%85%E5%8E%82%E7%9A%84%E5%9B%9B%E4%B8%AA%E6%9C%88/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="肖劲宇">
+      <meta itemprop="description" content="视界之外,想象之中">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="小鲸鱼的博客">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          在鹅厂的四个月
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-03-13 00:02:35" itemprop="dateCreated datePublished" datetime="2021-03-13T00:02:35+08:00">2021-03-13</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-03-12 23:58:30" itemprop="dateModified" datetime="2021-03-12T23:58:30+08:00">2021-03-12</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1 id="在鹅厂的四个月"><a href="#在鹅厂的四个月" class="headerlink" title="在鹅厂的四个月"></a>在鹅厂的四个月</h1><p>2020.11.24-2020.3.12. 在鹅厂的4个月很快结束了。</p>
+<blockquote>
+<p> 来时北京初雪，归时春风拂面。</p>
+</blockquote>
+<h3 id="起"><a href="#起" class="headerlink" title="起"></a>起</h3><p>某天开完组会后，导师说SDN已经过时了，又和Y师兄聊了聊网络方向的科研，觉得网络偏系统的科研在企业真实的场景下做才有前景。后来Y师兄在thuhole里面看到TEG招机器学习做网络故障检测的研究岗实习，Y师兄拍案而起，研究方向正中下怀。于是Y师兄加上了thuhole钓鱼帖的联系人，突然发现竟然是本部的贵系的M师兄，social了一波后，因为M师兄(PHD)在鹅厂刚入职做网络方向的research，比较缺人一块研究。无奈Y师兄还要赶ICDCS paper. 组里Z师兄研一还要上课，于是就定下来了让大四的我先去。后面Y师兄和Z师兄再来。</p>
+<p><img src="/2021/03/13/%E5%9C%A8%E9%B9%85%E5%8E%82%E7%9A%84%E5%9B%9B%E4%B8%AA%E6%9C%88/mmexport1601264622314.jpg" alt="mmexport1601264622314"></p>
+<p>经过了走场面二轮面试(因为面试太水了，这篇就不涉及面经了哈哈)，11.24我入职了鹅厂。</p>
+<h3 id="概况"><a href="#概况" class="headerlink" title="概况"></a>概况</h3><p>简单介绍一下自己的实习情况，这是我的第一份实习，大三下学期因为忙于保研也没有参加春招，也算是弥补了一下遗憾吧。</p>
+<p>我实习的部门是TEG的网络平台部，坐标北京中关村软件园。北京腾讯和新浪，百度，网易一起形成了互联网十字路口。虽然岗位是后台开发，但实际上来做的是偏科研的岗位(其实就是给M师兄搬砖hhh)</p>
+<p>前后我负责了 光纤衰耗阈值自动调整算法、数据中心流调度数据处理、telemtry数据采集、网络故障事件计算、故障事件分析。后来Y师兄也于1月入职，负责SNMP和Telemetry的对比实验。最终协助M师兄投出了鹅厂的第一篇NSDI(虽然我觉得大概率不太能中hhh)</p>
+<h3 id="鹅厂"><a href="#鹅厂" class="headerlink" title="鹅厂"></a>鹅厂</h3><p>入职后会给实习生分配Mentor，mentor会带你熟悉生活。我的Mentor就是M师兄。</p>
+<p>工作的时间差不多是995，不过也根据工作的多少，少的话吃了饭8点前就可以溜了，多的话最晚也12点走过。整体上而言氛围比较轻松，不会有限制说上班不能干其他的事儿，只要工作能干完时间也相对自由。(不确定是不是因为我是实习生的原因哈哈)。相比某厂的大小周，某厂的限制上班不能登陆社交软件，鹅厂氛围还是不错的。中午也可以自己在工位上休息，大家都会关灯，好多同事也都买了床放在工位下面旁边。 感觉鹅厂的员工好多都是二三十岁的年轻人，去食堂吃饭的时候有种大学生活延续的感觉。同事相互之间也会称呼“同学”。</p>
+<p>实习生是没有固定的工位的，如果有出差的同事就可以暂坐同事的工位。所以实习期间我一共换了4次工位。不过每次换工位都和M师兄坐一块。M师兄人也挺好的，摸鱼也不管我哈哈只要工作可以干完。</p>
+<p>福利的话，早上10点前有免费的早餐，北京这边晚上也免费(深圳那边是8点后有夜宵券，可以用来抵，也可以出去吃肯德基)。食堂有各种风味的饭，基本上可以吃到各个地方的特色，热干面，北京烤鸭，biangbiang面，麻辣烫，鸭血粉，胡辣汤，涮羊肉…还有日本菜，韩国菜…我实习的第一个月基本上没有吃到重样的饭。不过中午是要付费的，因为“天下没有免费的午餐”。所以一般中午吃的比较少，早上和晚上吃的多一些。晚上9点半后打车可以报销，不过在软件园9点半开始打车排队大概100多人，等一个多小时才能打到车。</p>
+<p><img src="/2021/03/13/%E5%9C%A8%E9%B9%85%E5%8E%82%E7%9A%84%E5%9B%9B%E4%B8%AA%E6%9C%88/pt2021_03_12_18_52_25.jpg" alt="pt2021_03_12_18_52_25"></p>
+<p>有时候下午会有下午茶，会有各种网红零食(比如奶枣)。元宵节下午茶TEG点了一堆汤圆太壮观了。</p>
+<p><img src="/2021/03/13/%E5%9C%A8%E9%B9%85%E5%8E%82%E7%9A%84%E5%9B%9B%E4%B8%AA%E6%9C%88/pt2021_03_12_18_58_21.jpg" alt="pt2021_03_12_18_58_21"></p>
+<p>内部玩儿鹅厂的各种游戏，各种娱乐平台都有福利，不过每月有固定的申请名额。正式员工每月还有30Q币，所有员工充Q币半价。我在入职期间还赶上了QQ音乐，QQ会员周年，送了一年的绿钻和20个月的QQ会员。年会的时候还每人发了阳光普照奖，200京东卡。</p>
+<p>鹅厂内部的娱乐设施也比较全，健身房，篮球厂，台球室，乒乓球台，羽毛球场，内部也有各种协会定期举办各种比赛。有幸参加了2020北分乒乓球赛，还混进了8强拿了小米手写板。还有企鹅问诊，可以在小程序上预约了看专家，还可以在中午去做个按摩嘿嘿。</p>
+<p><img src="/2021/03/13/%E5%9C%A8%E9%B9%85%E5%8E%82%E7%9A%84%E5%9B%9B%E4%B8%AA%E6%9C%88/pt2021_03_12_19_21_39.jpg" alt="pt2021_03_12_19_21_39"></p>
+<p>鹅厂之所以叫鹅厂，是因为自己的品牌爱马哥。每年腾讯都会出生肖公仔，作为当年的入职公仔。随便到几个工位都能看到桌子上摆的各种公仔hh，叫企鹅公仔厂名不虚传。</p>
+<p><img src="/2021/03/13/%E5%9C%A8%E9%B9%85%E5%8E%82%E7%9A%84%E5%9B%9B%E4%B8%AA%E6%9C%88/pt2021_03_12_19_17_41.jpg" alt="pt2021_03_12_19_17_41"></p>
+<h3 id="感受"><a href="#感受" class="headerlink" title="感受"></a>感受</h3><p>在实习期间我发现了一个问题，有时候在企业微信上发了消息同事已读却好久也不回复。我也不好意思直接去工位找他们，怕打扰他们工作。M师兄就告诉我遇到不会的东西直接去工位找他们就行。大家其实都很乐意帮助别人解决问题的，没回消息可能是因为太忙了。后来我遇到问题发了消息没回复我就直接去工位找同事，问题都能得到很高效的解决。</p>
+<p>刚入职鹅厂的时候，感觉前两个月的学习的东西还是很多的。新鲜感也很足，每天都很有动力去学习新东西，实现新需求。后面熟悉了自己掌握的业务之后，需求可以很快实现，上班的时候就越来越觉得无聊，甚至都会产生厌倦的心理，起床的时候也从很有动力变得越来越拖延，上班也经常摸鱼划水。后来我思考了一下，在互联网公司上班，其实大多数人还是一颗螺丝钉，每天重复着自己熟悉的业务完成新的需求，好像一眼能望到自己的人生。</p>
+<p>相比于螺丝钉式的工作，我更喜欢尝试新的东西。我还记得搭建出自己个人网站后的开心，用自己实现的编译器跑通代码时的兴奋，设计出的RPG游戏得到答辩老师认可时的激动，看着元胞自动机模拟出交通流时的两眼放光，分布式集群加多线程加大数据框架解决上亿级别telemetry数据处理时的满足感。</p>
+<p>虽然现在还没想好以后是进入工业界还是学术界，希望自己始终能够保持新鲜感。</p>
+<h3 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h3><p>最后，在鹅厂的这段经历还是很棒的，相对轻松的工作氛围，各种工作福利，优秀的同事，大厂光环都让人有充分留下来的理由。感谢两位师兄，感谢各位帮助过我的同事！捷哥，波波，龙哥，明刚，鸡哥，二爷，恒总，大师，小武，泉伟，宏伟，国志…或许三年后有缘再见！</p>
+<p>离别总是有些伤感，好快啊，一段旅程又结束了～</p>
+<p><img src="/2021/03/13/%E5%9C%A8%E9%B9%85%E5%8E%82%E7%9A%84%E5%9B%9B%E4%B8%AA%E6%9C%88/pt2021_03_12_19_08_26.jpg" alt="pt2021_03_12_19_08_26"></p>
+<p><img src="/2021/03/13/%E5%9C%A8%E9%B9%85%E5%8E%82%E7%9A%84%E5%9B%9B%E4%B8%AA%E6%9C%88/mmexport1615452357140.jpg" alt="mmexport1615452357140"></p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/12/30/My2020/" rel="prev" title="My2020">
+      <i class="fa fa-chevron-left"></i> My2020
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+  </div>
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let activeClass = CONFIG.comments.activeClass;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#在鹅厂的四个月"><span class="nav-number">1.</span> <span class="nav-text">在鹅厂的四个月</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#起"><span class="nav-number">1.0.1.</span> <span class="nav-text">起</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#概况"><span class="nav-number">1.0.2.</span> <span class="nav-text">概况</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#鹅厂"><span class="nav-number">1.0.3.</span> <span class="nav-text">鹅厂</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#感受"><span class="nav-number">1.0.4.</span> <span class="nav-text">感受</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#最后"><span class="nav-number">1.0.5.</span> <span class="nav-text">最后</span></a></li></ol></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+	  
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="肖劲宇"
+      src="/images/avatar.gif">
+  <p class="site-author-name" itemprop="name">肖劲宇</p>
+  <div class="site-description" itemprop="description">视界之外,想象之中</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">21</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/xjywhu" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;xjywhu" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="/2017302580253@whu.edu.cn" title="E-Mail → 2017302580253@whu.edu.cn"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="http://weibo.com/5261297567" title="Weibo → http:&#x2F;&#x2F;weibo.com&#x2F;5261297567" rel="noopener" target="_blank"><i class="fa fa-fw fa-weibo"></i>Weibo</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://blog.csdn.net/qq_42614839" title="CSDN → https:&#x2F;&#x2F;blog.csdn.net&#x2F;qq_42614839" rel="noopener" target="_blank"><i class="fa fa-fw fa-cc"></i>CSDN</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://www.zhihu.com/people/sheng-xia-67-53-68" title="知乎 → https:&#x2F;&#x2F;www.zhihu.com&#x2F;people&#x2F;sheng-xia-67-53-68" rel="noopener" target="_blank"><i class="fa fa-fw fa-graduation-cap"></i>知乎</a>
+      </span>
+  </div>
+
+
+  <div class="links-of-blogroll motion-element">
+    <div class="links-of-blogroll-title">
+      <i class="fa fa-fw fa-link"></i>
+      Links
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <a href="http://baidu.com/" title="http:&#x2F;&#x2F;baidu.com&#x2F;" rel="noopener" target="_blank">baidu</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="http://google.com/" title="http:&#x2F;&#x2F;google.com&#x2F;" rel="noopener" target="_blank">google</a>
+        </li>
+    </ul>
+  </div>
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">小鲸鱼</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v4.2.0
+  </div>
+  <span class="post-meta-divider">|</span>
+  <div class="theme-info">主题 – <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> v7.7.0
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+</body>
+</html>
